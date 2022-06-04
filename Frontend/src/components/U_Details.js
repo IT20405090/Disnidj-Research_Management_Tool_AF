@@ -79,13 +79,7 @@ export default function UpdateDetails()  {
 
         }
         
-        onDelete = (id) =>{
-
-          axios.delete(`http://localhost:8000/group/delete/${id}`).then((res) =>{
-            alert("Deleted successfully!");
-            this.retriveGroups();
-          })
-        }
+       
 
          useEffect(function effectFunction() {
              console.log("get ID",id);
@@ -201,27 +195,30 @@ export default function UpdateDetails()  {
                 
               />
             </div>
-      
+      <br/>
             </form>
-                   <button className="btn btn-success" type="submit" style={{marginTop:'15px', width:"250px", marginLeft:"150px",backgroundColor:"#0147ab"}} onClick={(e)=>changeOnClick(e)} >
-                       <i className="far fa-check-square"></i>
-                       &nbsp; Update and confirm group details
-      
-                   </button>
             
            
                      
+                   
       </div>
       </td>
          
             <td>
             <center>
-              
-                     <img src={grp} class="img-fluid" alt="" width="1500" height="1000" margin-left="100px"/>
+           
+                     <img src={grp} class="img-fluid" alt="" width="1400" height="1000" margin-left="100px"/>
                      <br/><br/>
-                     <a className="btn btn-primary" href = "/ViewAreas" style = {{textDecoration:'none'}} >Select a topic</a>&nbsp;&nbsp;&nbsp;
-                     <a className="btn btn-danger btn-block" href='#' onClick={() =>this.onDelete(groups._id)}>
-                  &nbsp;Delete Group</a>
+                     <button className="btn btn-success" type="submit" style={{marginTop:'15px', width:"250px", marginLeft:"150px",backgroundColor:"#0147ab"}} onClick={(e)=>changeOnClick(e)} >
+                       <i className="far fa-check-square"></i>
+                       &nbsp; Update and Confirm
+      
+                   </button>
+                   
+                   &nbsp;&nbsp;&nbsp; <a className="btn btn-primary" href = "/ViewAreas" style={{marginTop:'15px', width:"250px", marginLeft:"150px"}} >Select a topic</a>
+            
+                     
+                     
       
              </center>
              </td>

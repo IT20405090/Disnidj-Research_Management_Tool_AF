@@ -124,7 +124,7 @@ export default function UpdateAllDetails()  {
         <div>
 
         <br/>
-            <center><h1>Co-Supervisor Response</h1></center> 
+            <center><h1>Supervisor Response</h1></center> 
           <br/>
 
           <div>

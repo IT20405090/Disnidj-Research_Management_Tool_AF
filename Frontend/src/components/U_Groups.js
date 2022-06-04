@@ -26,7 +26,13 @@ retriveGroups(){
   });
 }
 
+onDelete = (id) =>{
 
+  axios.delete(`http://localhost:8000/group/delete/${id}`).then((res) =>{
+    alert("Deleted successfully!");
+    this.retriveGroups();
+  })
+}
 
 
 filterData(groups,searchKey){
@@ -105,6 +111,7 @@ handleSearchArea = (e) =>{
           <th scope='col'>Student 3</th>
           <th scope='col'>Student 4</th>
           <th scope='col'>Group Leader</th>
+          <th scope='col'>Delete Group</th>
           
 
           </tr>
@@ -123,7 +130,8 @@ handleSearchArea = (e) =>{
               <td>{groups.student4}</td>
               <td>{groups.Leader}</td>
               <td>
-             
+              <a className="btn btn-danger btn-block" href='#' onClick={() =>this.onDelete(groups._id)}>
+                  &nbsp;Delete Group</a>
 
               </td>
 
