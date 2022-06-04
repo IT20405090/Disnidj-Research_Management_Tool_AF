@@ -74,7 +74,11 @@ import topic from '../../public/topic.png';
       return (
         <div className="edit">
       <div>
-      
+      <button className="btn btn-success" 
+                    style={{marginLeft:'10px',padding:'8px 8px',backgroundColor:'#3895d3', width:'200px'}}>
+                    <a href="/UHome" style={{textDecoration:'none',backgroundColor:'#3895d3',color:'white',fontSize:'16px'}}> 
+                    <i class="far fa-arrow-alt-circle-left"></i>&nbsp;Go Back to Home Page</a>
+                    </button>
       
         </div>
 
@@ -85,6 +89,7 @@ import topic from '../../public/topic.png';
                <br/>
       </div>
             <br/>
+           
             <div >
 <p><b>Step 5 - You can now register your selected topic here with the names of the supervisors and co-supervisors you wish to work with for the project. After registering your topic the supervisor responds to your request, so you can proceed with the work.</b></p>
             <form className="row g-3">
